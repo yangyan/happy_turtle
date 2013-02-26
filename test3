@@ -1,0 +1,18 @@
+{
+  SET A := 100 ;
+  DO I FROM 1 TO 3 {
+    SET B := A ;
+    FD B
+    DO I FROM 1 TO 3 {
+      SET C := B 2 / ;
+      FD C
+      DO I FROM 1 TO 3 {
+	SET D := C A 4 / + ;
+	FD D
+	LT 120
+      }
+      RT 120
+    }
+    LT 120
+  }
+}
